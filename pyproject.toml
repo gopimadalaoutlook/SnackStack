@@ -1,0 +1,29 @@
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snackstack"
+version = "0.1.0"
+description = "A multi-agent food delivery assistant built with LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.5",
+    "langchain>=0.3",
+    "langchain-chroma>=0.2",
+    "langchain-openai>=0.2",
+    "langgraph>=0.2",
+    "pydantic>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.scripts]
+snackstack = "snackstack.main:main"
+
+[tool.setuptools.packages.find]
+include = ["snackstack*"]
+
+[tool.unittest]
+start-directory = "tests"
