@@ -6,9 +6,10 @@ menu search, and support human-in-the-loop order clarification.
 
 ## Current status
 
-Phase 1 is complete: project metadata, environment-backed settings, OpenAI client
-factories, centralized logging, and the shared graph-state type are in place.
-The interactive CLI, agents, RAG tools, and graph are not implemented yet.
+The project foundation and data-access layer are complete. SnackStack now includes
+the static menu and order data, lazy ChromaDB menu retrieval, and direct menu and
+order lookup tools. The interactive CLI, agents, and conversation graph are not
+implemented yet.
 
 ## Prerequisites
 
@@ -24,7 +25,7 @@ The interactive CLI, agents, RAG tools, and graph are not implemented yet.
 
 ## Development checks
 
-Run the Phase 1 unit tests with:
+Run the unit test suite with:
 
 ```text
 python -m unittest discover -s tests -v
